@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let total = 0
+        let vetor = [
+            { nome: "maria", qtd: 1, valor: 2.520 },
+            { nome: "Rita", qtd: 2, valor: 288 },
+            { nome: "Carla", qtd: 3, valor: 2 }
+        ] //[0, 1, 2, 3, 4];
+
+        for (const index in vetor) {
+            const { valor, qtd } = vetor[index]
+
+            total += valor + qtd
+            console.log(total)
+
+        }
+        console.log(total)
+        for (let indice = 0; indice < vetor.length; indice++) {
+            console.log(vetor[indice].nome);
+        }
+
+
+        for (let i = 0; i < vetor.length; i++) {
+            console.log(vetor[i].nome)
+        }
+
+        for (var iterator in vetor) {
+            console.log(vetor[iterator].id)
+        }
+        for (var iterator of vetor) {
+
+            console.log(vetor[iterator])
+        }
+
+        const produtos = [
+            { descricao: 'Resma Ofício', valor: 11.50, quantidade: 10 },
+            { descricao: 'Lapis preto', valor: 0.50, quantidade: 3 },
+            { descricao: 'Transferidor plastico', valor: 1.20, quantidade: 4 }
+        ]
+
+        //let total = 0
+
+        for (const index in produtos) {
+            const { valor, quantidade } = produtos[index]
+
+            total += valor * quantidade
+        }
+
+        console.log(total)
+        function encontraIsolado(vetor){
+    let sorted = vetor.sort();
+    let odd;
+    sorted.forEach((element, index) => {
+        let thisElement = sorted[index];
+        let nextEle = sorted[index +1];
+
+        if (thisElement == nextEle){
+            index++;
+        } else {
+            odd = thisElement;
+        }
+    })
+    return odd;
+    
+}
+console.log(encontraIsolado(["a", "b", "a", "a", "c", "b"]));
+    </script>
+</body>
+
+</html>
