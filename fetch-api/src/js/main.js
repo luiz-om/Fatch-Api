@@ -5,7 +5,7 @@ let showData = (result) => {
     for (const campo in result) {
         if (document.querySelector('#' + campo)) {
             document.querySelector('#' + campo).value = result[campo]
-
+  
 
         }
     }
