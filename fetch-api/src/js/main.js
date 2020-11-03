@@ -1,5 +1,17 @@
 let cep = document.querySelector('#cep')
 
 cep.addEventListener('blur', (e)=>{
-    console.log(cep.value)
+    let search =cep.value.replace('-','')
+
+    var options={
+        method:'GET',
+        mode: 'cors',
+        cache: 'default'
+    }
+fetch(`https://viacep.com.br/ws/${search}/json`, options)
+.then(response=>{response.json()
+    .then(data => console.log(data))})
+.catch(e=> console.log('Deu erro Mensagem:'+e.message))
+
+console.log(search)
 })
