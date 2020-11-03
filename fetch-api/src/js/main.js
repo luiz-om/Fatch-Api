@@ -6,7 +6,7 @@ let showData = (result) => {
         if (document.querySelector('#' + campo)) {
             document.querySelector('#' + campo).value = result[campo]
   
-d
+
         }
     }
 }
