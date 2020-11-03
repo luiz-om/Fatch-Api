@@ -15,9 +15,16 @@
             { nome: "Rita", qtd: 2, valor: 288 },
             { nome: "Carla", qtd: 3, valor: 2 }
         ] //[0, 1, 2, 3, 4];
+for (const iterator of vetor) {
+    console.log(iterator)
+}
 
+for (let i = 0; i < vetor.length; i++) {
+  console.log(vetor[i].valor+vetor[i].nome);
+    
+}
         for (const index in vetor) {
-            const { valor, qtd } = vetor[index]
+            const { valor, qtd } = vetor[index] 
 
             total += valor + qtd
             console.log(total)

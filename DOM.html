@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+
+    <script>
+var teste =  document.createElement("p")
+var app = document.querySelector('#app')
+teste.innerText = 'Texto do React'
+teste.id = 'paragrafoTeste'
+teste.className='ClasseName'
+teste.setAttribute('onclick','classe()')
+
+function classe(){
+    alert('clicado')
+}
+
+
+app.append(teste)
+
+    </script>
+    
+</body>
+</html>
